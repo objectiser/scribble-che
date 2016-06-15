@@ -31,22 +31,10 @@
   <packaging>jar</packaging>
   <name>Scribble::Tools::Che::Shared</name>
 
-  <properties>
-  </properties>
-
-  <dependencies>
-  </dependencies>
-
   <build>
     <resources>
       <resource>
         <directory>src/main/java</directory>
-        <includes>
-          <include>**/*.java</include>
-        </includes>
-      </resource>
-      <resource>
-        <directory>src/main/resources</directory>
       </resource>
     </resources>
   </build>

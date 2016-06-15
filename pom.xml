@@ -777,6 +777,11 @@
         <artifactId>guice-multibindings</artifactId>
         <version>${version.com.google.inject}</version>
       </dependency>
+      <dependency>
+        <groupId>com.google.inject.extensions</groupId>
+        <artifactId>guice-assistedinject</artifactId>
+        <version>${version.com.google.inject}</version>
+      </dependency>
 
       <dependency>
         <groupId>javax.inject</groupId>
