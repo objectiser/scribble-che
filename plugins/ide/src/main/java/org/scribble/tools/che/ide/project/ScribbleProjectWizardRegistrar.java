@@ -10,7 +10,6 @@
  *******************************************************************************/
 package org.scribble.tools.che.ide.project;
 
-import com.google.inject.Inject;
 import com.google.inject.Provider;
 
 import org.eclipse.che.api.workspace.shared.dto.ProjectConfigDto;
@@ -28,18 +27,10 @@ import java.util.List;
  */
 public class ScribbleProjectWizardRegistrar implements ProjectWizardRegistrar {
 
-    private final List<Provider<? extends WizardPage<ProjectConfigDto>>> wizardPagesProviders;
+    private final List<Provider<? extends WizardPage<ProjectConfigDto>>> wizardPages;
 
-    /**
-     * Constructor for JSON Example project wizard.
-     *
-     * @param schemaUrlWizardPageProvider
-     *         the schema URL wizard page provider
-     */
-    @Inject
-    public ScribbleProjectWizardRegistrar(Provider<SchemaUrlWizardPage> schemaUrlWizardPageProvider) {
-        wizardPagesProviders = new ArrayList<>();
-        wizardPagesProviders.add(schemaUrlWizardPageProvider);
+    public ScribbleProjectWizardRegistrar() {
+        wizardPages = new ArrayList<>();
     }
 
     @NotNull
@@ -54,7 +45,7 @@ public class ScribbleProjectWizardRegistrar implements ProjectWizardRegistrar {
 
     @NotNull
     public List<Provider<? extends WizardPage<ProjectConfigDto>>> getWizardPages() {
-        return wizardPagesProviders;
+        return wizardPages;
     }
 
 }
