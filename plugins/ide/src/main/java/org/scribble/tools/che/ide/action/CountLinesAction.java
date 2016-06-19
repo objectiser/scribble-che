@@ -29,7 +29,7 @@ import java.util.Map;
  * Line counting is implemented by consuming a RESTful service.
  */
 @Singleton
-public class CountLinesAction extends JsonExampleProjectAction {
+public class CountLinesAction extends ScribbleProjectAction {
 
     private final AppContext            appContext;
     private final StringMapUnmarshaller unmarshaller;

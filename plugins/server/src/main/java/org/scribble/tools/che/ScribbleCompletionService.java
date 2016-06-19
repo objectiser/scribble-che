@@ -8,7 +8,7 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.che.plugin.jsonexample;
+package org.scribble.tools.che;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -19,7 +19,7 @@ import java.util.List;
  * Simple service that returns a static list of strings.
  */
 @Path("json-example-completions/")
-public class JsonExampleCompletionService {
+public class ScribbleCompletionService {
 
     /**
      * Returns a static list of completable keywords.

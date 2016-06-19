@@ -8,7 +8,7 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.che.plugin.jsonexample;
+package org.scribble.tools.che;
 
 import com.google.inject.Inject;
 

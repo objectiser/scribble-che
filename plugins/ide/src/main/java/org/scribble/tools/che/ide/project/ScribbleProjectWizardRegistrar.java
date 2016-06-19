@@ -16,7 +16,7 @@ import com.google.inject.Provider;
 import org.eclipse.che.api.workspace.shared.dto.ProjectConfigDto;
 import org.eclipse.che.ide.api.project.type.wizard.ProjectWizardRegistrar;
 import org.eclipse.che.ide.api.wizard.WizardPage;
-import org.eclipse.che.plugin.jsonexample.shared.Constants;
+import org.scribble.tools.che.shared.Constants;
 
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
@@ -44,12 +44,12 @@ public class ScribbleProjectWizardRegistrar implements ProjectWizardRegistrar {
 
     @NotNull
     public String getProjectTypeId() {
-        return Constants.JSON_EXAMPLE_PROJECT_TYPE_ID;
+        return Constants.SCRIBBLE_PROJECT_TYPE_ID;
     }
 
     @NotNull
     public String getCategory() {
-        return Constants.JSON_EXAMPLE_CATEGORY;
+        return Constants.SCRIBBLE_CATEGORY;
     }
 
     @NotNull

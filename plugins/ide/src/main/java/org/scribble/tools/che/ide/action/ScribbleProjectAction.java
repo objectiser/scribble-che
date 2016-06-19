@@ -16,16 +16,16 @@ import org.eclipse.che.ide.api.action.ActionEvent;
 import org.eclipse.che.ide.api.app.AppContext;
 import org.eclipse.che.ide.api.app.CurrentProject;
 import org.eclipse.che.ide.workspace.perspectives.project.ProjectPerspective;
-import org.eclipse.che.plugin.jsonexample.shared.Constants;
+import org.scribble.tools.che.shared.Constants;
 import org.vectomatic.dom.svg.ui.SVGResource;
 
 import javax.validation.constraints.NotNull;
 import java.util.Collections;
 
 /**
- * JSON Example project specific action.
+ * Scribble project specific action.
  */
-public abstract class JsonExampleProjectAction extends AbstractPerspectiveAction {
+public abstract class ScribbleProjectAction extends AbstractPerspectiveAction {
 
     private AppContext appContext;
 
@@ -41,7 +41,7 @@ public abstract class JsonExampleProjectAction extends AbstractPerspectiveAction
      * @param svgResource
      *         the icon of the resource
      */
-    public JsonExampleProjectAction(AppContext appContext,
+    public ScribbleProjectAction(AppContext appContext,
                                     @NotNull String text,
                                     @NotNull String description,
                                     @Nullable SVGResource svgResource) {
@@ -55,7 +55,7 @@ public abstract class JsonExampleProjectAction extends AbstractPerspectiveAction
 
     private static boolean isJsonExampleProjectType(CurrentProject currentProject) {
         return currentProject != null
-               && Constants.JSON_EXAMPLE_PROJECT_TYPE_ID.equals(currentProject.getProjectConfig().getType());
+               && Constants.SCRIBBLE_PROJECT_TYPE_ID.equals(currentProject.getProjectConfig().getType());
     }
 
     @Override

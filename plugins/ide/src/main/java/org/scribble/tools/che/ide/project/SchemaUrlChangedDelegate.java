@@ -11,7 +11,7 @@
 package org.scribble.tools.che.ide.project;
 
 import org.eclipse.che.api.workspace.shared.dto.ProjectConfigDto;
-import org.eclipse.che.plugin.jsonexample.shared.Constants;
+import org.scribble.tools.che.shared.Constants;
 
 import java.util.Collections;
 

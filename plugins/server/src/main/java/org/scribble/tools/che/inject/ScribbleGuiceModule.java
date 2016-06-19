@@ -8,7 +8,7 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.che.plugin.jsonexample.inject;
+package org.scribble.tools.che.inject;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.multibindings.Multibinder;
@@ -16,10 +16,10 @@ import com.google.inject.multibindings.Multibinder;
 import org.eclipse.che.api.project.server.handlers.ProjectHandler;
 import org.eclipse.che.api.project.server.type.ProjectTypeDef;
 import org.eclipse.che.inject.DynaModule;
-import org.eclipse.che.plugin.jsonexample.JsonExampleCompletionService;
-import org.eclipse.che.plugin.jsonexample.JsonLocService;
-import org.eclipse.che.plugin.jsonexample.generator.JsonExampleCreateProjectHandler;
-import org.eclipse.che.plugin.jsonexample.projecttype.JsonExampleProjectType;
+import org.scribble.tools.che.ScribbleCompletionService;
+import org.scribble.tools.che.JsonLocService;
+import org.scribble.tools.che.generator.ScribbleCreateProjectHandler;
+import org.scribble.tools.che.projecttype.ScribbleProjectType;
 
 import static com.google.inject.multibindings.Multibinder.newSetBinder;
 
@@ -28,17 +28,17 @@ import static com.google.inject.multibindings.Multibinder.newSetBinder;
  * and service bindings.
  */
 @DynaModule
-public class JsonExampleGuiceModule extends AbstractModule {
+public class ScribbleGuiceModule extends AbstractModule {
 
     @Override
     protected void configure() {
         Multibinder<ProjectTypeDef> projectTypeDefMultibinder = newSetBinder(binder(), ProjectTypeDef.class);
-        projectTypeDefMultibinder.addBinding().to(JsonExampleProjectType.class);
+        projectTypeDefMultibinder.addBinding().to(ScribbleProjectType.class);
 
         Multibinder<ProjectHandler> projectHandlerMultibinder = newSetBinder(binder(), ProjectHandler.class);
-        projectHandlerMultibinder.addBinding().to(JsonExampleCreateProjectHandler.class);
+        projectHandlerMultibinder.addBinding().to(ScribbleCreateProjectHandler.class);
 
         bind(JsonLocService.class);
-        bind(JsonExampleCompletionService.class);
+        bind(ScribbleCompletionService.class);
     }
 }

@@ -22,7 +22,7 @@ import org.eclipse.che.ide.api.notification.StatusNotification;
  * Action for showing a string via the {@link NotificationManager}.
  */
 @Singleton
-public class HelloWorldAction extends JsonExampleProjectAction {
+public class HelloWorldAction extends ScribbleProjectAction {
 
     private NotificationManager notificationManager;
 

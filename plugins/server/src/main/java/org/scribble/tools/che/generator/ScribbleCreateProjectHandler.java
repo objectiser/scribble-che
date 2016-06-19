@@ -8,7 +8,7 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.che.plugin.jsonexample.generator;
+package org.scribble.tools.che.generator;
 
 import org.eclipse.che.api.core.ConflictException;
 import org.eclipse.che.api.core.ForbiddenException;
@@ -17,17 +17,17 @@ import org.eclipse.che.api.project.server.FolderEntry;
 import org.eclipse.che.api.project.server.handlers.CreateProjectHandler;
 import org.eclipse.che.api.project.server.type.AttributeValue;
 
+import static org.scribble.tools.che.shared.Constants.SCRIBBLE_PROJECT_TYPE_ID;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
-
-import static org.eclipse.che.plugin.jsonexample.shared.Constants.JSON_EXAMPLE_PROJECT_TYPE_ID;
 
 /**
  * Generates a new project which contains a package.json with default content
  * and a default person.json file within an myJsonFiles folder.
  */
-public class JsonExampleCreateProjectHandler implements CreateProjectHandler {
+public class ScribbleCreateProjectHandler implements CreateProjectHandler {
 
     private static final String FILE_NAME = "package.json";
 
@@ -49,6 +49,6 @@ public class JsonExampleCreateProjectHandler implements CreateProjectHandler {
 
     @Override
     public String getProjectType() {
-        return JSON_EXAMPLE_PROJECT_TYPE_ID;
+        return SCRIBBLE_PROJECT_TYPE_ID;
     }
 }

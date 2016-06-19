@@ -12,6 +12,8 @@ package org.scribble.tools.che.ide;
 
 import com.google.inject.Inject;
 
+import static org.scribble.tools.che.shared.Constants.SCRIBBLE_CATEGORY;
+
 import org.eclipse.che.ide.api.action.ActionManager;
 import org.eclipse.che.ide.api.action.DefaultActionGroup;
 import org.eclipse.che.ide.api.extension.Extension;
@@ -19,8 +21,6 @@ import org.eclipse.che.ide.api.icon.Icon;
 import org.eclipse.che.ide.api.icon.IconRegistry;
 import org.scribble.tools.che.ide.action.CountLinesAction;
 import org.scribble.tools.che.ide.action.HelloWorldAction;
-
-import static org.eclipse.che.plugin.jsonexample.shared.Constants.JSON_EXAMPLE_CATEGORY;
 
 /**
  * JSON Example extension that registers actions and icons.
@@ -61,6 +61,6 @@ public class ScribbleExtension {
         jsonGroup.add(helloWorldAction);
 
         iconRegistry.registerIcon(
-                new Icon(JSON_EXAMPLE_CATEGORY + ".samples.category.icon", jsonExampleResources.icon()));
+                new Icon(SCRIBBLE_CATEGORY + ".samples.category.icon", jsonExampleResources.icon()));
     }
 }

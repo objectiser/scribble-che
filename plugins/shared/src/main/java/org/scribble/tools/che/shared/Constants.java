@@ -8,10 +8,10 @@
  * Contributors:
  *   Codenvy, S.A. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.che.plugin.jsonexample.shared;
+package org.scribble.tools.che.shared;
 
 /**
- * Holds JSON Exapmle related constants used across the server and the IDE bundle.
+ * Holds Scribble related constants used across the server and the IDE bundle.
  */
 public final class Constants {
 
@@ -23,22 +23,22 @@ public final class Constants {
     /**
      * Language attribute value.
      */
-    public static final String JSON_EXAMPLE_LANG = "json";
+    public static final String SCRIBBLE_LANG = "json";
 
     /**
-     * JSON Example Project Type ID.
+     * Scribble Project Type ID.
      */
-    public static final String JSON_EXAMPLE_PROJECT_TYPE_ID = "json-example";
+    public static final String SCRIBBLE_PROJECT_TYPE_ID = "scribble";
 
     /**
-     * JSON Example Category.
+     * Scribble Category.
      */
-    public static final String JSON_EXAMPLE_CATEGORY = "JSON Example";
+    public static final String SCRIBBLE_CATEGORY = "Scribble";
 
     /**
      * JSON Schema reference attribute name.
      */
-    public static final String JSON_EXAMPLE_SCHEMA_REF_ATTRIBUTE = "json-schem-ref";
+    //public static final String JSON_EXAMPLE_SCHEMA_REF_ATTRIBUTE = "json-schem-ref";
 
     private Constants() {
     }
